@@ -1,0 +1,42 @@
+<h1 class="h3 mb-0 text-gray-800">CAPI API Manager</h1>
+
+<div style="margin-bottom: 15px; margin-top: 15px;">
+  <a href="#" class="btn btn-success btn-icon-split" *ngIf="camelRouteServerUp">
+      <span class="icon text-white-50">
+        <i class="fa fa-thumbs-up"></i>
+      </span>
+      <span class="text">CAMEL ROUTE SERVER UP</span>
+  </a>
+  <a href="#" class="btn btn-danger btn-icon-split" *ngIf="!camelRouteServerUp">
+      <span class="icon text-white-50">
+        <i class="fa fa-thumbs-down"></i>
+      </span>
+      <span class="text">CAMEL ROUTE SERVER DOWN</span>
+  </a>
+</div>
+
+<div class="col-lg-6 mb-4" *ngIf="!camelRouteServerUp">
+  <div class="card bg-danger text-white shadow">
+    <div class="card-body">
+      CAMEL ROUTE SERVER DOWN
+    </div>
+  </div>
+</div>
+
+<h4>Camel deployed routes list</h4>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Uptime</th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let route of routes; let i=index">
+      <td>{{route.id}}</td>
+      <td>{{route.uptime}}</td>
+      <td>{{route.status}}</td>
+    </tr>
+  </tbody>
+</table>

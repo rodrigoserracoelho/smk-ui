@@ -1,0 +1,77 @@
+<div id="wrapper">
+  <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <!-- Sidebar - Brand -->
+    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <div class="sidebar-brand-icon rotate-n-15">
+        <i class="fas fa-laugh-wink"></i>
+      </div>
+      <div class="sidebar-brand-text mx-3">CAPI Gateway</div>
+    </a>
+
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
+
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+      <a class="nav-link" href="/apis/list">
+        <i class="fa fa-cog"></i>
+        <span>List API's</span></a>
+    </li>
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+      <a class="nav-link" href="/apis">
+        <i class="fa fa-cog"></i>
+        <span>Create API</span></a>
+    </li>
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+      <a class="nav-link" href="/test">
+        <i class="fa fa-cog"></i>
+        <span>Test API Call</span></a>
+    </li>
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item active">
+      <a class="nav-link" href="index.html">
+        <i class="fa fa-lock"></i>
+        <span> Certificates</span></a>
+    </li>
+  </ul>
+  <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content-wrapper" class="d-flex flex-column">
+      <div id="content">
+        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+          <!-- Sidebar Toggle (Topbar) -->
+          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+          <!-- Topbar Navbar -->
+          <ul class="navbar-nav ml-auto">
+            <div class="topbar-divider d-none d-sm-block"></div>
+            <!-- Nav Item - User Information -->
+            <div class="dropdown show">
+                <li ngbDropdown  class="nav-item dropdown no-arrow">
+                    <a ngbDropdownToggle class="nav-link dropdown-toggle"  href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{username}}</span>
+                        <i class="fa fa-user-circle"></i>
+                    </a>
+                    <div ngbDropdownMenu  class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">
+                            <i class="fa fa-sitemap"></i>
+                            Endpoints
+                          </a>
+                          <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                            <i class="fa fa-sign-out"></i>
+                            Logout
+                          </a>
+                    </div>
+                  </li>
+            </div>
+          </ul>
+        </nav>
+        <div class="container-fluid">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

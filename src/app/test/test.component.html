@@ -1,0 +1,14 @@
+<h1 class="h3 mb-2 text-gray-800">Test an API</h1>
+<div>
+  <form [formGroup]="testFormGroup">
+    <div class="form-group">
+      <label for="apiEndpoint">API endpoint</label>
+      <input class="form-control" formControlName="apiEndpoint" type="text" placeholder="https://" />
+    </div>
+  </form>
+  <button class="btn btn-primary" type="button" (click)=callAPI()>
+    Call API
+  </button>
+  <pre *ngIf="!callWithError" id="content">{{result}}</pre>
+  <pre *ngIf="callWithError" id="errorContent">{{errorResult}}</pre>
+</div>

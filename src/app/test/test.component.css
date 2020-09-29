@@ -1,0 +1,24 @@
+form.submitted input.ng-invalid, input.ng-dirty.ng-invalid {
+    border: 1px solid red;
+}
+
+  
+#content {
+    width: 100%;
+    min-height: 30rem;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    background-color: #f4f5f7;
+    margin-top: 10px;
+  }
+  #errorContent {
+    width: 100%;
+    min-height: 30rem;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    background-color: #f4f5f7;
+    color: red;
+    margin-top: 10px;
+  }
