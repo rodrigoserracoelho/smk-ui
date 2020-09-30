@@ -2,33 +2,22 @@ import {catchError, retry} from 'rxjs/internal/operators';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse, HttpErrorResponse, HttpParams } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
+import { KeycloakService } from 'keycloak-angular';
 
-const apiUrl = 'https://localhost:8080/route';
-/*const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type':  'application/json',
-    'Authorization': 'jwt-token'
-  })
-};*/
+const apiUrl = 'http://localhost:8080/country';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
+export class ListCountryService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private keycloak: KeycloakService) { }
 
-  getApis(): Observable<any> {
+  getCountries(): Observable<any> {
+    
     return this.http.get<any[]>(apiUrl).pipe(
-      catchError(this.handleError<any[]>('getApis')));
+      catchError(this.handleError<any[]>('getCountries')));
   }
-
-  postApi(api: any): Observable<any> {
-    console.log("CALLING API");
-    return this.http.post<any[]>(apiUrl, api).pipe(
-    catchError(this.handleError<any[]>('postApi')));
-  }
-
   
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {

@@ -5,14 +5,13 @@ import { RouterModule } from '@angular/router';
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AppAuthGuard } from './app.authguard';
-import { ApisComponent } from './apis/apis.component';
-import { TestComponent } from './test/test.component';
-import { ListApisComponent } from './listapis/listapis.component';
+import { ListCountriesComponent } from './listcountries/listcountries.component';
+
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/apis',
+    redirectTo: '/list',
     pathMatch: 'full'
   },
   {
@@ -21,18 +20,8 @@ const routes: Routes = [
     canActivate: [AppAuthGuard]
   },
   {
-    path: 'apis',
-    component: ApisComponent,
-    canActivate: [AppAuthGuard]
-  },
-  {
-    path: 'apis/list',
-    component: ListApisComponent,
-    canActivate: [AppAuthGuard]
-  },
-  {
-    path: 'test',
-    component: TestComponent,
+    path: 'list',
+    component: ListCountriesComponent,
     canActivate: [AppAuthGuard]
   }
 ];

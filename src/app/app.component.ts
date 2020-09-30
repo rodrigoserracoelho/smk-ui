@@ -19,26 +19,8 @@ export class AppComponent {
       console.log(user);
       this.userProfile = user;
       this.username = this.userProfile["username"];
-      console.log(this.username);
-    })
-    
-    
+    });
   }
-  
-  
-
-  
-  /*login(){
-    this.oauthService.initImplicitFlow();
-  }*/
-  
-  /*logout(){
-    this.oauthService.logOut();
-  }*/
-
-
-
-
 }
 
 

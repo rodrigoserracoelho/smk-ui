@@ -7,7 +7,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { KeycloakService, KeycloakAngularModule } from 'keycloak-angular';
 import { HomeComponent } from './home/home.component';
 import { initializer } from './sso.config';
-import { ApisComponent } from './apis/apis.component';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -15,17 +14,14 @@ import { ControlErrorsDirective } from './control-error/control-errors.directive
 import { ControlErrorComponent } from './control-error/control-error.component';
 import { ControlErrorContainerDirective } from './control-error/control-error-container.directive';
 import { FormSubmitDirective } from './form-submit.directive';
-import { TestComponent } from './test/test.component';
-import { ListApisComponent } from './listapis/listapis.component';
 import {MatTableModule} from '@angular/material/table';
+import { ListCountriesComponent } from './listcountries/listcountries.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ApisComponent,
-    ListApisComponent,
-    TestComponent,
+    ListCountriesComponent,
     ControlErrorsDirective, 
     ControlErrorComponent, 
     ControlErrorContainerDirective, 
